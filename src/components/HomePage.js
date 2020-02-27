@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar'
-import Button from './Button'
 import RestaurantInfo from './RestaurantInfo'
 import { Route } from 'react-router-dom';
 
@@ -12,10 +11,8 @@ class HomePage extends React.Component {
 
     <NavBar />
 
-    <Route path='/:id' component={RestaurantInfo} />
+    <Route exact path='/' component={RestaurantInfo} />
 
-    <Button name={"another one"}/>
-    <Button name={"where u?"}/>
       </div>
     );
   }

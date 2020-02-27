@@ -14,7 +14,7 @@ const ButtonStyles = styled.button`
 
 const Button = (props) => {
   return (
-    <ButtonStyles>
+    <ButtonStyles onClick={props.clicked}>
       {props.name}
     </ButtonStyles>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 import styled from 'styled-components';
+import Button from './Button'
+
 
 const StyledInfo = styled.div`
 
@@ -26,33 +28,41 @@ class RestaurantInfo extends React.Component {
       image: ''
     };
 
-    getResto = () => {
-      console.log('hello', this.props.match.params.id);
-      id = this.props.match.params.id;
-      axios.get(`https://team-hangry.herokuapp.com/restaurants/${id}.json`)
-      .then( res =>{
-        console.log('result:', res.data);
-      this.setState({ name: res.data.name })
-      this.setState({ description: res.data.description })
-      this.setState({ price: res.data.price })
-      this.setState({ cuisine: res.data.cuisine })
-      this.setState({ eatout: res.data.eatout })
-      this.setState({ eatin: res.data.eatin })
-      this.setState({ image: res.data.image })
-      })
-      .catch( err => console.warn(err) )
-    }
+    getRandomResto = () => {
+     let url = 'https://team-hangry.herokuapp.com/restaurants'
+
+     axios.get(url)
+        .then(res => {
+           let data = res.data
+           let RestoNum = Math.floor(Math.random() * data.length) //quote number
+           let randomResto = data[RestoNum] //actual quote
+           this.setState({
+              name: randomResto['name'],
+              description: randomResto['description'],
+              price: randomResto['price'],
+              cuisine: randomResto['cuisine'],
+              eatout: randomResto['eatout'],
+              eatin: randomResto['eatin'],
+              image: randomResto['image']
+           })
+        })
+  }
 
     componentDidMount(){
-      this.getResto();
+      this.getRandomResto();
       console.log(this.props);
     }
+
+    // componentDidUpdate(){
+    //   this.getRandomResto();
+    //   console.log(this.props);
+    // }
 
     render() {
 
         return (
           <div className="info">
-            <h3>RESTOOOOOOO {this.state.time}</h3>
+            <h3>Let's eat at <span>{this.state.name}</span></h3>
 
             <StyledInfo>
           <label>name: </label>
@@ -75,6 +85,9 @@ class RestaurantInfo extends React.Component {
           <br/>
           <img src={this.state.image}/>
         </StyledInfo>
+        <Button name={"another one"} clicked={this.getRandomResto}/>
+        <Button name={"where u?"}/>
+
       </div>
         );
     }
