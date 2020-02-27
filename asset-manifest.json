@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/front-end-resto/static/css/main.e28b67d5.chunk.css",
+    "main.js": "/front-end-resto/static/js/main.6638aabc.chunk.js",
+    "main.js.map": "/front-end-resto/static/js/main.6638aabc.chunk.js.map",
+    "runtime-main.js": "/front-end-resto/static/js/runtime-main.9bd799d6.js",
+    "runtime-main.js.map": "/front-end-resto/static/js/runtime-main.9bd799d6.js.map",
+    "static/js/2.1dda9fce.chunk.js": "/front-end-resto/static/js/2.1dda9fce.chunk.js",
+    "static/js/2.1dda9fce.chunk.js.map": "/front-end-resto/static/js/2.1dda9fce.chunk.js.map",
+    "index.html": "/front-end-resto/index.html",
+    "precache-manifest.dd1e2a22224e724a63686791b745ef9d.js": "/front-end-resto/precache-manifest.dd1e2a22224e724a63686791b745ef9d.js",
+    "service-worker.js": "/front-end-resto/service-worker.js",
+    "static/css/main.e28b67d5.chunk.css.map": "/front-end-resto/static/css/main.e28b67d5.chunk.css.map",
+    "static/js/2.1dda9fce.chunk.js.LICENSE.txt": "/front-end-resto/static/js/2.1dda9fce.chunk.js.LICENSE.txt",
+    "static/media/LogIn": "/front-end-resto/static/media/LogIn.d41d8cd9.bin",
+    "static/media/Map": "/front-end-resto/static/media/Map.d41d8cd9.bin",
+    "static/media/RestaurantNew": "/front-end-resto/static/media/RestaurantNew.d41d8cd9.bin",
+    "static/media/SignUp": "/front-end-resto/static/media/SignUp.d41d8cd9.bin",
+    "static/media/logo.svg": "/front-end-resto/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9bd799d6.js",
+    "static/js/2.1dda9fce.chunk.js",
+    "static/css/main.e28b67d5.chunk.css",
+    "static/js/main.6638aabc.chunk.js"
+  ]
+}
