@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './NavBar'
 import Button from './Button'
 import RestaurantInfo from './RestaurantInfo'
-import axios from 'axios'
+import { Route } from 'react-router-dom';
 
 class HomePage extends React.Component {
 
@@ -12,7 +12,7 @@ class HomePage extends React.Component {
 
     <NavBar />
 
-    <RestaurantInfo />
+    <Route path='/:id' component={RestaurantInfo} />
 
     <Button name={"another one"}/>
     <Button name={"where u?"}/>

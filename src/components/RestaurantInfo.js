@@ -12,31 +12,41 @@ const StyledInfo = styled.div`
   line-height: 2.5vw;
 `
 
+let id = '';
+
 class RestaurantInfo extends React.Component {
 
   state = {
-      id: 13,
-      name: 'Chat Thai',
-      description: 'thai food',
-      price: '$$',
-      cuisine: 'Thai',
-      eatout: '👍🏼',
-      eatin: '👍🏼',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTd4HMxWaEaV3Mqv9f_UUdyb_77wv4zwFGH_3iz4diyZGoH8bKU'
+      name: '',
+      description: '',
+      price: '',
+      cuisine: '',
+      eatout: '',
+      eatin: '',
+      image: ''
     };
 
-    // getResto = () => {
-    //   console.log('hello');
-    //   axios.get(`http://localhost:3000/restaurants/13.json`)
-    //   .then( res => {
-    //     console.log(res);
-    //   })
-    //   .catch( err => console.warn(err) )
-    // }
-    //
-    // componentDidMount(){
-    //   this.getResto()
-    // }
+    getResto = () => {
+      console.log('hello', this.props.match.params.id);
+      id = this.props.match.params.id;
+      axios.get(`https://team-hangry.herokuapp.com/restaurants/${id}.json`)
+      .then( res =>{
+        console.log('result:', res.data);
+      this.setState({ name: res.data.name })
+      this.setState({ description: res.data.description })
+      this.setState({ price: res.data.price })
+      this.setState({ cuisine: res.data.cuisine })
+      this.setState({ eatout: res.data.eatout })
+      this.setState({ eatin: res.data.eatin })
+      this.setState({ image: res.data.image })
+      })
+      .catch( err => console.warn(err) )
+    }
+
+    componentDidMount(){
+      this.getResto();
+      console.log(this.props);
+    }
 
     render() {
 
@@ -54,6 +64,16 @@ class RestaurantInfo extends React.Component {
           <label>price: </label>
           {this.state.price ? this.state.price : <p>Loading...</p>}
           <br/>
+          <label>cuisine: </label>
+          {this.state.cuisine ? this.state.cuisine : <p>Loading...</p>}
+          <br/>
+          <label>eatout: </label>
+          {this.state.eatout ? this.state.eatout : <p>Loading...</p>}
+          <br/>
+          <label>eatin: </label>
+          {this.state.eatin ? this.state.eatin : <p>Loading...</p>}
+          <br/>
+          <img src={this.state.image}/>
         </StyledInfo>
       </div>
         );

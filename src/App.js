@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import RestaurantNew from './components/RestaurantNew';
+import RestaurantInfo from './components/RestaurantInfo';
 import Map from './components/Map';
 import './App.css';
 import {Switch, BrowserRouter, Route} from 'react-router-dom'
@@ -17,11 +18,11 @@ class App extends React.Component {
           <div className="App">
 
           <Switch>
-            <Route exact path='/' component={HomePage}/>
             <Route exact path='/signup' component={SignUp}/>
             <Route exact path='/login' component={LogIn}/>
             <Route exact path='/restaurant-new' component={RestaurantNew}/>
             <Route exact path='/map' component={Map}/>
+            <Route path='/' component={HomePage}/>
           </Switch>
         </div>
       </BrowserRouter>
