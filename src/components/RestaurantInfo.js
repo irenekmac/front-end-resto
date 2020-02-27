@@ -1,7 +1,9 @@
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
 import styled from 'styled-components';
-import Button from './Button'
+import Button from './Button';
+import Gmap from './Gmap';
+
 
 
 const StyledInfo = styled.div`
@@ -22,6 +24,7 @@ class RestaurantInfo extends React.Component {
       name: '',
       description: '',
       price: '',
+      address: '',
       cuisine: '',
       eatout: '',
       eatin: '',
@@ -39,6 +42,7 @@ class RestaurantInfo extends React.Component {
            this.setState({
               name: randomResto['name'],
               description: randomResto['description'],
+              address: randomResto['address'],
               price: randomResto['price'],
               cuisine: randomResto['cuisine'],
               eatout: randomResto['eatout'],
@@ -84,9 +88,11 @@ class RestaurantInfo extends React.Component {
           {this.state.eatin ? this.state.eatin : <p>Loading...</p>}
           <br/>
           <img src={this.state.image}/>
+
         </StyledInfo>
+
         <Button name={"another one"} clicked={this.getRandomResto}/>
-        <Button name={"where u?"}/>
+        <Button name={"where u?"} clicked={this.getRandomResto}/>
 
       </div>
         );

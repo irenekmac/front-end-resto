@@ -3,15 +3,16 @@ import NavBar from './NavBar'
 import RestaurantInfo from './RestaurantInfo'
 import { Route } from 'react-router-dom';
 
+
 class HomePage extends React.Component {
 
   render() {
     return (
       <div>
 
-    <NavBar />
+        <NavBar />
 
-    <Route exact path='/' component={RestaurantInfo} />
+        <Route exact path='/' component={RestaurantInfo} />
 
       </div>
     );

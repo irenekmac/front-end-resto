@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Gmap from './Gmap';
 
 const ButtonStyles = styled.button`
   background: #D66F6F;
