@@ -18,6 +18,7 @@ const StyledMap = styled.div`
 `
 
 class Gmap extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -45,12 +46,27 @@ class Gmap extends React.Component {
     componentDidMount(){
       this.getRestoAddress();
       console.log(this.props);
+      this.getAddressCoordinates()
     }
-    getAddressCoords = () => {
-      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.address}&key=${API_KEY}`)
-        .then(response => response.json())
-        .then(data => {
-          this.setState({ latitude: data.geometry.location.latitude, longitude: data.geometry.location.longitude })
+
+    getAddressCoordinates = () => {
+      axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.address}&key=${API_KEY}`)
+        // .then(console.log('working'))
+        // .then(response => response.json())
+        .then(res => {
+          // console.log(res.data.geometry.location.lat);
+          // console.log(res.data.geometry.location.lng);
+          console.log(res);
+          const addressLat = res.data.results[0].geometry.location.lat
+          const addressLng = res.data.results[0].geometry.location.lng
+
+
+           this.setState({
+             latitude: addressLat,
+             longitude: addressLng
+             // longitude: 'res.data.geometry.location.lng'
+
+           })
         })
         .catch(error => console.warn(error))
     }
@@ -100,7 +116,6 @@ class Gmap extends React.Component {
 
 
   render () {
-    console.warn("test", this.state.address)
 
     return (
       <div>

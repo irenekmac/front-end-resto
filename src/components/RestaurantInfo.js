@@ -92,7 +92,7 @@ class RestaurantInfo extends React.Component {
         </StyledInfo>
 
         <Button name={"another one"} clicked={this.getRandomResto}/>
-        <Button name={"where u?"} clicked={this.getRandomResto}/>
+        <Button name={"where u?"} />
 
       </div>
         );
