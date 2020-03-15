@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hangry - A restaurant generator for when you can't decide what to eat.
 
-## Available Scripts
+## Table of Contents
+* [Introduction](#introduction)
+* [How to get started](#how-to-get-started)
+* [Motivation](#motivation)
+* [Technologies](#technologies)
+* [Key Features](#key-features)
+* [Learnings](#learnings)
+* [Future Developments](#future-developments)
 
-In the project directory, you can run:
+<a name="introduction"></a>
+## Introduction
 
-### `yarn start`
+A web app created for when two (or more) people can’t decide where to eat. Users can add restaurants they like or want to check out and the web app chooses one at random.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Feel free to test out my app [here](https://irenekmac.github.io/front-end-resto/).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<a name="how-to-get-started"></a>
+## How to get started
 
-### `yarn test`
+Feel free to clone this repository.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run locally, run the following in the root directory in the terminal:
+1. `npm install`
+2. `npm run start`
 
-### `yarn build`
+<a name="motivation"></a>
+## Motivation
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The aim of this project was to:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Learn React
+* Learn and use styled components
+* Work with APIs and how to call on the data
+* Use Gmaps API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This was my last project at General Assembly's Software Engineering Immersive course at Sydney.
 
-### `yarn eject`
+<a name="technologies"></a>
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Ruby on Rails (backend)
+* [Styled Components](https://styled-components.com/)
+* SCSS
+* JavaScript
+* [Google Map's API](https://developers.google.com/maps/documentation)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Key Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* **Discovery home page** - gives a restaurant at random
+* **Maps** - Shows on the map where the restaurant is located
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a name="Learnings"></a>
+## Learnings
 
-## Learn More
+* How components work and can be reused
+* How APIs work and how to call on them
+* Working with json data
+* how state objects works in react
+* Styling using Styled Components
+* Form creation and validation
+* Using and navigating Gmap's API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a name="future-developments"></a>
+## Future Developments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* ** Login Page ** - log in authentication
+* ** Fix bugs with Gmaps ** - gmaps isn't working to the expected outcome.
+* ** add restaurant ** - User can add their suggested restaurant.
