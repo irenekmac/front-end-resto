@@ -12,7 +12,7 @@ class HomePage extends React.Component {
 
         <NavBar />
 
-        <Route exact path='/' component={RestaurantInfo} />
+        <Route path='/' component={RestaurantInfo} />
 
       </div>
     );
