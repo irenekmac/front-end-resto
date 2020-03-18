@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import Gmap from './Gmap';
+import React from "react";
+import styled from "styled-components";
 
 const ButtonStyles = styled.button`
-  background: #D66F6F;
+  background: #d66f6f;
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: #fff;
@@ -12,13 +11,8 @@ const ButtonStyles = styled.button`
   font-size: 2em;
 `;
 
-const Button = (props) => {
-  return (
-    <ButtonStyles onClick={props.clicked}>
-      {props.name}
-    </ButtonStyles>
-  );
-
-}
+const Button = props => {
+  return <ButtonStyles onClick={props.clicked}>{props.name}</ButtonStyles>;
+};
 
 export default Button;

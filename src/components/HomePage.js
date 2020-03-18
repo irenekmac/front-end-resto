@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
-import NavBar from './NavBar'
-import RestaurantInfo from './RestaurantInfo'
-import { Route } from 'react-router-dom';
+import React, { Component } from "react";
+import NavBar from "./NavBar";
+import RestaurantInfo from "./RestaurantInfo";
 
-
-class HomePage extends React.Component {
-
-  render() {
-    return (
-      <div>
-
-        <NavBar />
-
-        <Route path='/' component={RestaurantInfo} />
-
-      </div>
-    );
-  }
-}
+const HomePage = () => {
+  return (
+    <div>
+      <NavBar />
+      <RestaurantInfo />
+    </div>
+  );
+};
 
 export default HomePage;
