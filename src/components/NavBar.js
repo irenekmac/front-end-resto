@@ -6,27 +6,47 @@ const StyledNav = styled.nav`
   background: #5176A6;
   margin: 0;
   padding: 1em;
-  ul {
-    display: flex;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  h1 {
     margin: 0;
     padding: 0;
     list-style: none;
     height: 100%;
     width: auto;
-    align-items: center;
-    li {
-      box-sizing: border-box;
-      a {
-        color: #fff;
-        text-decoration: none;
-        margin: 10px;
-      }
-      .login {
-        color: black;
-      }
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
     }
   }
+
+
 `
+const Button = styled.button`
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: flex-end;
+  align-items: right;
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 3px;
+  color: white;
+  border: 2px solid white;
+  margin: 0 63em;
+  padding: 0.25em 1em;
+  transition: 0.5s all ease-out;
+  &:hover {
+    background-color: palevioletred;
+    color: white;
+  }
+
+`;
+
 
 const NavBar = () => {
 
@@ -34,14 +54,12 @@ const NavBar = () => {
     <div>
       <StyledNav>
 
-        <ul>
-          <li> <Link to='/front-end-resto/'> HANGRY </Link> </li>
-          <div className='login'>
-            <li> <Link to='/login'>LOG IN</Link> </li>
+        <h1> <Link to='/'> HANGRY </Link> </h1>
+        <div className="fknbutton">
+          <Button>Login</Button>
+        </div>
 
-          </div>
 
-      </ul>
       </StyledNav>
 
     </div>
