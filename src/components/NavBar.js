@@ -21,6 +21,9 @@ const StyledNav = styled.nav`
         text-decoration: none;
         margin: 10px;
       }
+      .login {
+        color: black;
+      }
     }
   }
 `
@@ -32,9 +35,11 @@ const NavBar = () => {
       <StyledNav>
 
         <ul>
-          <li> <Link to='/'> HANGRY </Link> </li>
-          <li> <Link to='/login'>LOG IN</Link> </li>
-          <li> <Link to='/signup'>SIGN UP</Link> </li>
+          <li> <Link to='/front-end-resto/'> HANGRY </Link> </li>
+          <div className='login'>
+            <li> <Link to='/login'>LOG IN</Link> </li>
+
+          </div>
 
       </ul>
       </StyledNav>
