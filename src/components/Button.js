@@ -6,8 +6,8 @@ const ButtonStyles = styled.button`
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: #fff;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+  margin: 0 35px;
+  padding: 5.25px 32px;
   font-size: 2em;
 `;
 

@@ -34,11 +34,11 @@ const Button = styled.button`
   cursor: pointer;
   background: transparent;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 16px;
   color: white;
   border: 2px solid white;
-  margin: 0 63em;
-  padding: 0.25em 1em;
+  margin: 10px 1px;
+  padding: 9.25px 19px;
   transition: 0.5s all ease-out;
   &:hover {
     background-color: palevioletred;
