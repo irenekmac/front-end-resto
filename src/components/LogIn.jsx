@@ -2,8 +2,39 @@ import React, {useState} from "react";
 import {useHistory} from 'react-router-dom';
 import NavBar from "./NavBar";
 import axios from 'axios';
+import styled from "styled-components";
 
 import '../Login.css'
+
+const Input = styled.input.attrs(props => ({
+  // we can define static props
+  type: "password",
+
+  // or we can define dynamic ones
+  size: props.size || "1em",
+}))`
+  color: palevioletred;
+  font-size: 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+
+  /* here we use the dynamically computed prop */
+  margin: ${props => props.size};
+  padding: ${props => props.size};
+`;
+
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
 
 const LogIn = props => {
 
@@ -78,13 +109,15 @@ const LogIn = props => {
         <form id="login" onSubmit={handleSubmit}>
           <div id="login-inputs">
 
+             <Input value={password} type="password" />
+
             <input value={email} onChange={handleEmailChange} type="text" placeholder="Your email address"/>
 
 
             <input value={password} onChange={handlePasswordChange} type="password" placeholder="Password"/>
           </div>
+          <Button>Login</Button>
 
-          <button id="login-submit" type="submit">Login</button>
         </form>
     </div>
   );
