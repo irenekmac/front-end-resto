@@ -7,7 +7,7 @@ import '../Login.css'
 
 const LogIn = props => {
 
-  const [email, setEmail] = useState("ian@ga.com");
+  const [email, setEmail] = useState("minters@test.co");
   const [password, setPassword] = useState("chicken");
   const [errors, setErrors] = useState("");
   let history = useHistory();
@@ -31,7 +31,7 @@ const LogIn = props => {
     // console.log(event);
 
 
-      axios.post( 'http://localhost:3000/login', {
+      axios.post( 'https://team-hangry.herokuapp.com/', {
         email: email,
         password: password,
         headers: {
@@ -83,7 +83,6 @@ const LogIn = props => {
 
             <input value={password} onChange={handlePasswordChange} type="password" placeholder="Password"/>
           </div>
-          <br/>
 
           <button id="login-submit" type="submit">Login</button>
         </form>

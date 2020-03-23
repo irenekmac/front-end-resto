@@ -3,7 +3,7 @@ nav #login-trigger,
   nav #signup-link,
     nav #logOut-link {
       display: inline;
-      height: 25px;
+      height: 50px;
       line-height: 25px;
       font-weight: bold;
       padding: 0 8px;
@@ -27,7 +27,7 @@ nav #login-content {
 #login-inputs input {
   color: #888;
   padding: 6px 5px;
-  margin: 0 0 5px 0;
+  margin: 63px 12px 20px 4px;
   width: 238px;
   border-radius: 2em;
   box-shadow: 0 1px 1px #ccc inset;

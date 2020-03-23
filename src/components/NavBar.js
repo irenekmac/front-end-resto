@@ -44,6 +44,12 @@ const Button = styled.button`
     background-color: palevioletred;
     color: white;
   }
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+  }
 
 `;
 
@@ -55,8 +61,8 @@ const NavBar = () => {
       <StyledNav>
 
         <h1> <Link to='/'> HANGRY </Link> </h1>
-        <div className="fknbutton">
-          <Button>Login</Button>
+        <div className="">
+          <Button> <Link to='/login'> Login </Link> </Button>
         </div>
 
 
