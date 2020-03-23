@@ -7,8 +7,6 @@ import styled from "styled-components";
 import '../Login.css'
 
 const Input = styled.input.attrs(props => ({
-  // we can define static props
-  type: "password",
 
   // or we can define dynamic ones
   size: props.size || "1em",
@@ -109,12 +107,9 @@ const LogIn = props => {
         <form id="login" onSubmit={handleSubmit}>
           <div id="login-inputs">
 
-             <Input value={password} type="password" />
+            <Input value={email} onChange={handleEmailChange} type="text" placeholder="Email address"/>
+            <Input value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
 
-            <input value={email} onChange={handleEmailChange} type="text" placeholder="Your email address"/>
-
-
-            <input value={password} onChange={handlePasswordChange} type="password" placeholder="Password"/>
           </div>
           <Button>Login</Button>
 
